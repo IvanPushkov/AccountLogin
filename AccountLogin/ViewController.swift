@@ -44,15 +44,17 @@ class ViewController: UIViewController {
     @IBAction func logInButtonAction(_ sender: Any) {
         if passeword.text == "0000" && userName.text == "Admin" {
             performSegue(withIdentifier: "goVC", sender: nil)
+            passeword.text = " "
+            userName.text = " "
         }
-        if passeword.text == "0000" && userName.text != "Admin"
+       else if passeword.text == "0000" && userName.text != "Admin"
         { let firstAlert = UIAlertController(title: "Внимание", message: "Неправильный пароль!", preferredStyle: .alert)
             let okBtn = UIAlertAction(title: "Ok", style: .default)
             firstAlert.addAction(okBtn)
             present(firstAlert, animated: true)
         }
         
-            if passeword.text != "0000" && userName.text == "Admin"
+          else  if passeword.text != "0000" && userName.text == "Admin"
         { let sacondAlert = UIAlertController(title: "Внимание", message: "Неправильный пароль!", preferredStyle: .alert)
                 let okBtn = UIAlertAction(title: "Ok", style: .default)
                 sacondAlert.addAction(okBtn)
@@ -60,7 +62,7 @@ class ViewController: UIViewController {
                 present(sacondAlert, animated: true)
             }
         
-        if passeword.text != "0000" && userName.text != "Admin"
+       else if passeword.text != "0000" && userName.text != "Admin"
         { let thirdAlert = UIAlertController(title: "Внимание", message: " Неправильный пароль и логин", preferredStyle: .alert)
             let okBtn = UIAlertAction(title: "Ok", style: .default)
             thirdAlert.addAction(okBtn)

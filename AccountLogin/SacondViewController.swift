@@ -29,5 +29,7 @@ class SacondViewController: UIViewController {
     @IBAction func check(_ sender: Any) {
         checkButton()
     }
+   
+    
 }
 
